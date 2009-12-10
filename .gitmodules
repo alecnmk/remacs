@@ -1,0 +1,3 @@
+[submodule "plugins/cucumber.el"]
+	path = plugins/cucumber.el
+	url = git://github.com/michaelklishin/cucumber.el.git
