@@ -1,3 +1,6 @@
 [submodule "plugins/cucumber.el"]
 	path = plugins/cucumber.el
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "snippets/yasnippets-rspec"]
+	path = snippets/yasnippets-rspec
+	url = git://github.com/mknittig/yasnippets-rspec.git
