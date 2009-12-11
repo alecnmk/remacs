@@ -4,3 +4,6 @@
 [submodule "snippets/yasnippets-rspec"]
 	path = snippets/yasnippets-rspec
 	url = git://github.com/mknittig/yasnippets-rspec.git
+[submodule "plugins/rspec-mode"]
+	path = plugins/rspec-mode
+	url = git://github.com/pezra/rspec-mode.git

@@ -23,7 +23,7 @@
 
 ; rspec-mode
 (add-to-list 'load-path
-             "~/.emacs.d/plugins/rspec-mode")
+	     "~/.emacs.d/plugins/rspec-mode")
 (load-file "~/.emacs.d/plugins/rspec-mode/rspec-mode.el")
 
 ; applying color heme
