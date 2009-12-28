@@ -1,3 +1,4 @@
 #name : render :partial => " ... ", :status =>  ... 
+#group : rails
 # --
 render :partial => "${item}", :status => ${500}

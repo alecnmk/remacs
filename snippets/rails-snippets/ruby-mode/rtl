@@ -1,3 +1,4 @@
 #name : render :text => " ... ", :layout => " ... "
+#group : rails
 # --
 render :text => "${Text here...}", :layout => "${layoutname}"

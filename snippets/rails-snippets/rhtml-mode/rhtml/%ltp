@@ -1,0 +1,3 @@
+#name : <%= link_to " ... ", path %>
+# --
+<%= link_to "${title}", ${index}_path %>$0

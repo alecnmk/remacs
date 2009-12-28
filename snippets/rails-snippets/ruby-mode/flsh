@@ -1,3 +1,4 @@
 #name : flash[: ... ] = " ... "
+#group : rails
 # --
 flash[:${notice}] = "${Text here...}"

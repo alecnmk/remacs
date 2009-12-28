@@ -1,0 +1,3 @@
+#name : <%= text_field_tag(:property) %>
+# --
+<%= text_field_tag(:${property}) %>

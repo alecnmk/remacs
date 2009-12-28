@@ -1,3 +1,4 @@
 #name : has_one : ... 
+#group : rails
 # --
 has_one :${class}

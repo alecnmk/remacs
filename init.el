@@ -18,6 +18,12 @@
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
+; haml&saas mode
+(add-to-list 'load-path 
+	     "~/.emacs.d/plugins/haml-mode")
+(require 'haml-mode)
+(require 'sass-mode)
+
 ; ansi-color 
 (ansi-color-for-comint-mode-on)
 

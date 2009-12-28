@@ -1,3 +1,4 @@
 #name : assert_not_nil  ... 
+#group : rails
 # --
 assert_not_nil ${object}
