@@ -3,5 +3,5 @@
 #name : should render_template
 #group: should
 # --
-response.should render_template(:${1:template})
+response.should render_template '${1:template}'
 $0

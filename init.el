@@ -27,12 +27,13 @@
 ; ansi-color 
 (ansi-color-for-comint-mode-on)
 
-; rspec-mode
-(add-to-list 'load-path
-	     "~/.emacs.d/plugins/mode-compile")
-(add-to-list 'load-path
-	     "~/.emacs.d/plugins/rspec-mode")
-(load-file "~/.emacs.d/plugins/rspec-mode/rspec-mode.el")
+; mode-compile (required by rspec-mode)
+(add-to-list 'load-path "~/.emacs.d/plugins/mode-compile")
+(require 'mode-compile)
+
+; rspec-emacs
+(add-to-list 'load-path "~/.emacs.d/plugins/rspec-mode")
+(require 'rspec-mode)
 
 ; applying color heme
 (require 'color-theme)
