@@ -3,11 +3,7 @@
 #name : describe (String)
 #group: describe
 # --
-describe '${1:description}' do
-
-  it 'should ${2:description}' do
-    $0
-  end
+describe "${1:description}" do
 
 end
 

@@ -9,6 +9,11 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
 (require 'git-emacs)
 
+; action-script mode
+(add-to-list 'load-path "~/.emacs.d/plugins/flex")
+(require 'actionscript-mode)
+(add-to-list 'auto-mode-alist '("\\.as\\'" . actionscript-mode))
+
 ; vala-mode
 (add-to-list 'load-path 
 	     "~/.emacs.d/plugins/vala-mode")
