@@ -1,6 +1,9 @@
 ; emacs desktop mode
 (desktop-save-mode 1)
 
+; disabling menu-bar-mode
+(menu-bar-mode -1)
+
 ; ido
 (require 'ido)
 (ido-mode t)
@@ -101,3 +104,5 @@
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
 
+(setq custom-file "~/.emacs.d/customizations.el")
+(load custom-file)
