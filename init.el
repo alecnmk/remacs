@@ -4,6 +4,13 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; gist.github
+(set 'gist-view-gist 1)
+(set 'github-user "alecnmk")
+(set 'github-token "595bec32065e5e42eeb1813e5065951f")
+(add-to-list 'load-path "~/.emacs.d/plugins/gist.el")
+(require 'gist)
+
 ; ido
 (require 'ido)
 (ido-mode t)
@@ -16,6 +23,11 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/flex")
 (require 'actionscript-mode)
 (add-to-list 'auto-mode-alist '("\\.as\\'" . actionscript-mode))
+
+; yaml-mode
+(add-to-list 'load-path "~/.emacs.d/plugins/yaml-mode")
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ; vala-mode
 (add-to-list 'load-path 

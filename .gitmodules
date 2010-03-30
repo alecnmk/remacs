@@ -7,3 +7,9 @@
 [submodule "plugins/rspec-mode"]
 	path = plugins/rspec-mode
 	url = git://github.com/pezra/rspec-mode.git
+[submodule "plugins/yaml-mode"]
+	path = plugins/yaml-mode
+	url = git://github.com/yoshiki/yaml-mode.git
+[submodule "plugins/gist.el"]
+	path = plugins/gist.el
+	url = git://github.com/defunkt/gist.el.git
