@@ -5,6 +5,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(face-font-family-alternatives (quote (("Inconsolata" "fixed") ("Monospace" "courier" "fixed") ("courier" "CMU Typewriter Text" "fixed") ("Sans Serif" "helv" "helvetica" "arial" "fixed") ("helv" "helvetica" "arial" "fixed"))))
  '(flyspell-use-meta-tab nil)
  '(hscroll-margin 1)
  '(indent-tabs-mode nil)

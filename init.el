@@ -4,6 +4,9 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; deleting trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ; gist.github
 (set 'gist-view-gist 1)
 (set 'github-user "alecnmk")
