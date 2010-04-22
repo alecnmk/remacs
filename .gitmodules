@@ -13,3 +13,9 @@
 [submodule "plugins/gist.el"]
 	path = plugins/gist.el
 	url = git://github.com/defunkt/gist.el.git
+[submodule "plugins/rinari"]
+	path = plugins/rinari
+	url = git://github.com/eschulte/rinari.git
+[submodule "plugins/jump.el"]
+	path = plugins/jump.el
+	url = git://github.com/eschulte/jump.el.git

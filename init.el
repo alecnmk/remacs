@@ -85,9 +85,14 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
+;; Rinari
+(add-to-list 'load-path "~/.emacs.d/plugins/jump.el")
+(add-to-list 'load-path "~/.emacs.d/plugins/rinari")
+(require 'rinari)
+
 ; enabling EMACS_RAILS
-(setq load-path (cons "~/.emacs.d/rails" load-path))
-(require 'rails)
+;; (setq load-path (cons "~/.emacs.d/rails" load-path))
+;; (require 'rails)
 
 ;; (defun try-complete-abbrev (old)
 ;;   (if (expand-abbrev) t nil))
