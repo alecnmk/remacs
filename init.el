@@ -7,6 +7,10 @@
 ; deleting trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+; markdown mode hook
+(setq auto-mode-alist
+   (cons '("\\.text" . markdown-mode) auto-mode-alist))
+
 ; gist.github
 (set 'gist-view-gist 1)
 (set 'github-user "alecnmk")
@@ -33,7 +37,7 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ; vala-mode
-(add-to-list 'load-path 
+(add-to-list 'load-path
 	     "~/.emacs.d/plugins/vala-mode")
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
 (add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
@@ -42,12 +46,12 @@
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 ; haml&saas mode
-(add-to-list 'load-path 
+(add-to-list 'load-path
 	     "~/.emacs.d/plugins/haml-mode")
 (require 'haml-mode)
 (require 'sass-mode)
 
-; ansi-color 
+; ansi-color
 (ansi-color-for-comint-mode-on)
 
 ; mode-compile (required by rspec-mode)
@@ -83,16 +87,17 @@
 
 ; enabling EMACS_RAILS
 (setq load-path (cons "~/.emacs.d/rails" load-path))
-
-(defun try-complete-abbrev (old)
-  (if (expand-abbrev) t nil))
-
-(setq hippie-expand-try-functions-list
-  '(try-complete-abbrev
-    try-complete-file-name
-    try-expand-dabbrev))
-
 (require 'rails)
+
+;; (defun try-complete-abbrev (old)
+;;   (if (expand-abbrev) t nil))
+;;
+;; (setq hippie-expand-try-functions-list
+;;   '(try-complete-abbrev
+;;     try-complete-file-name
+;;     try-expand-dabbrev))
+
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -118,6 +123,11 @@
 )
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
+; auto-complete
+(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete//ac-dict")
+(ac-config-default)
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)

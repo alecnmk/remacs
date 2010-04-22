@@ -5,8 +5,11 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ac-quick-help-delay 1.0)
+ '(ac-trigger-key "")
  '(face-font-family-alternatives (quote (("Inconsolata" "fixed") ("Monospace" "courier" "fixed") ("courier" "CMU Typewriter Text" "fixed") ("Sans Serif" "helv" "helvetica" "arial" "fixed") ("helv" "helvetica" "arial" "fixed"))))
  '(flyspell-use-meta-tab nil)
+ '(global-auto-complete-mode t)
  '(hscroll-margin 1)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -19,9 +22,11 @@
  '(rails-ws:default-server-type "webrick")
  '(safe-local-variable-values (quote ((require-final-newline))))
  '(scroll-bar-mode nil)
+ '(tab-always-indent t)
  '(tab-width 4)
  '(tabbar-background-color "black")
  '(tabbar-mode t nil (tabbar))
+ '(tabbar-mwheel-mode t nil (tabbar))
  '(tabbar-scroll-left-button (quote ((" <") " =")))
  '(tabbar-scroll-right-button (quote ((" >") " =")))
  '(tabbar-separator (quote ("  |  ")))

@@ -1,2 +1,7 @@
 auto-save-list/*
 *~
+url/cookies
+.emacs.desktop
+ac-comphist.dat
+session.*
+tramp
