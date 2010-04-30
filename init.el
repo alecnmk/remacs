@@ -1,11 +1,42 @@
 ; emacs desktop mode
 (desktop-save-mode 1)
 
+;; (require 'gnus)
+;; ;; gnus gmail
+;; (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+;; (setq user-mail-address "alecnmk@gmail.com")
+;; (setq user-full-name "Alexander Naumenko")
+;; (setq gnus-agent nil)
+;; (load-library "smtpmail")
+;; (load-library "nnimap")
+;; (load-library "starttls")
+;; (add-to-list 'gnus-secondary-select-methods '(nnimap "gmail"
+;;                                   (nnimap-address "imap.gmail.com")
+;;                                   (nnimap-server-port 993)
+;;                                   (nnimap-stream ssl)))
+;; (setq message-send-mail-function 'smtpmail-send-it
+;;       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+;;       smtpmail-default-smtp-server "smtp.gmail.com"
+;;       smtpmail-smtp-server "smtp.gmail.com"
+;;       smtpmail-smtp-service 587
+;;       smtpmail-local-domain "smtp.gmail.com")
+
+;; require
+(require 'rdebug)
+
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
 ; deleting trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+; adding yasnippet
+(add-to-list 'load-path
+             "~/.emacs.d/plugins/yasnippet-0.6.1c")
+(require 'yasnippet)
+(setq yas/root-directory "~/.emacs.d/snippets")
+(yas/initialize)
+(yas/load-directory yas/root-directory)
 
 ; markdown mode hook
 (setq auto-mode-alist
@@ -23,8 +54,12 @@
 (ido-mode t)
 
 ; git-emacs
-(add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
-(require 'git-emacs)
+;; (add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
+;; (require 'git-emacs)
+
+;; egg (git)
+(add-to-list 'load-path "~/.emacs.d/plugins/egg")
+(require 'egg)
 
 ; action-script mode
 (add-to-list 'load-path "~/.emacs.d/plugins/flex")
@@ -44,6 +79,18 @@
 (add-to-list 'auto-mode-alist '("\\.vapi$" . vala-mode))
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
+
+;; rsense
+(setq rsense-home "/home/alex/projects/ruby/rsense")
+(add-to-list 'load-path (concat rsense-home "/etc"))
+(require 'rsense)
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-rsense-method)
+            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-.") 'ac-complete-rsense)))
 
 ; haml&saas mode
 (add-to-list 'load-path
@@ -72,14 +119,6 @@
 ; disabling all scroll bars
 (scroll-bar-mode)
 
-; adding yasnippet
-(add-to-list 'load-path
-             "~/.emacs.d/plugins/yasnippet-0.6.1c")
-(require 'yasnippet)
-(setq yas/root-directory "~/.emacs.d/snippets")
-(yas/initialize)
-(yas/load-directory yas/root-directory)
-
 ; loading Feature mode cucumber.el
 (add-to-list 'load-path "~/.emacs.d/plugins/cucumber.el")
 (require 'feature-mode)
@@ -89,19 +128,6 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/jump.el")
 (add-to-list 'load-path "~/.emacs.d/plugins/rinari")
 (require 'rinari)
-
-; enabling EMACS_RAILS
-;; (setq load-path (cons "~/.emacs.d/rails" load-path))
-;; (require 'rails)
-
-;; (defun try-complete-abbrev (old)
-;;   (if (expand-abbrev) t nil))
-;;
-;; (setq hippie-expand-try-functions-list
-;;   '(try-complete-abbrev
-;;     try-complete-file-name
-;;     try-expand-dabbrev))
-
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -128,7 +154,7 @@
 )
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
-; auto-complete
+;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete//ac-dict")

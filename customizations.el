@@ -5,13 +5,11 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode clojure-mode java-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode haml-mode sass-mode)))
  '(ac-quick-help-delay 1.0)
- '(ac-trigger-key "")
  '(face-font-family-alternatives (quote (("Inconsolata" "fixed") ("Monospace" "courier" "fixed") ("courier" "CMU Typewriter Text" "fixed") ("Sans Serif" "helv" "helvetica" "arial" "fixed") ("helv" "helvetica" "arial" "fixed"))))
- '(flyspell-use-meta-tab nil)
  '(global-auto-complete-mode t)
  '(hscroll-margin 1)
- '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js-enabled-frameworks (quote (javascript)))
  '(js-indent-level 2)
@@ -22,8 +20,7 @@
  '(rails-ws:default-server-type "webrick")
  '(safe-local-variable-values (quote ((require-final-newline))))
  '(scroll-bar-mode nil)
- '(tab-always-indent t)
- '(tab-width 4)
+ '(standard-indent 2)
  '(tabbar-background-color "black")
  '(tabbar-mode t nil (tabbar))
  '(tabbar-mwheel-mode t nil (tabbar))
