@@ -34,6 +34,9 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#232323" :foreground "#E6E1DC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Inconsolata"))))
+ '(egg-header ((t (:inherit variable-pitch :weight bold :height 1.1))))
+ '(egg-help-header-1 ((t (:inherit egg-text-base :weight bold :family "Inconsolata"))))
+ '(egg-text-base ((((class color) (background dark)) (:inherit variable-pitch :foreground "SteelBlue" :family "Inconsolata"))))
  '(tabbar-button ((t (:background "black" :foreground "lightgreen"))))
  '(tabbar-default ((((class color grayscale) (background dark)) (:inherit variable-pitch :background "black" :height 0.8))))
  '(tabbar-highlight ((t (:foreground "lightgreen"))))
