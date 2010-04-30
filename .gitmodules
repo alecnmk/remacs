@@ -19,3 +19,6 @@
 [submodule "plugins/jump.el"]
 	path = plugins/jump.el
 	url = git://github.com/eschulte/jump.el.git
+[submodule "plugins/egg"]
+	path = plugins/egg
+	url = git://github.com/byplayer/egg.git
