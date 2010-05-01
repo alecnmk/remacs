@@ -56,6 +56,10 @@
 ; git-emacs
 (add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
 (require 'git-emacs)
+;; Autoload (slimmer statup footprint, will activate when visiting a git
+;; file or running some top-level functions)
+(require 'git-emacs-autoloads)
+
 
 ; action-script mode
 (add-to-list 'load-path "~/.emacs.d/plugins/flex")

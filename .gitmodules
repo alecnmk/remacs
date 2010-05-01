@@ -22,3 +22,6 @@
 [submodule "plugins/egg"]
 	path = plugins/egg
 	url = git://github.com/byplayer/egg.git
+[submodule "plugins/git-emacs"]
+	path = plugins/git-emacs
+	url = git://github.com/tsgates/git-emacs.git
