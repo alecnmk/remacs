@@ -54,12 +54,8 @@
 (ido-mode t)
 
 ; git-emacs
-;; (add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
-;; (require 'git-emacs)
-
-;; egg (git)
-(add-to-list 'load-path "~/.emacs.d/plugins/egg")
-(require 'egg)
+(add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
+(require 'git-emacs)
 
 ; action-script mode
 (add-to-list 'load-path "~/.emacs.d/plugins/flex")
