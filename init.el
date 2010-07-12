@@ -1,29 +1,6 @@
 ; emacs desktop mode
 (desktop-save-mode 1)
 
-;; (require 'gnus)
-;; ;; gnus gmail
-;; (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
-;; (setq user-mail-address "alecnmk@gmail.com")
-;; (setq user-full-name "Alexander Naumenko")
-;; (setq gnus-agent nil)
-;; (load-library "smtpmail")
-;; (load-library "nnimap")
-;; (load-library "starttls")
-;; (add-to-list 'gnus-secondary-select-methods '(nnimap "gmail"
-;;                                   (nnimap-address "imap.gmail.com")
-;;                                   (nnimap-server-port 993)
-;;                                   (nnimap-stream ssl)))
-;; (setq message-send-mail-function 'smtpmail-send-it
-;;       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-;;       smtpmail-default-smtp-server "smtp.gmail.com"
-;;       smtpmail-smtp-server "smtp.gmail.com"
-;;       smtpmail-smtp-service 587
-;;       smtpmail-local-domain "smtp.gmail.com")
-
-;; require
-(require 'rdebug)
-
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
@@ -56,12 +33,8 @@
 (ido-mode t)
 
 ; git-emacs
-(add-to-list 'load-path "~/.emacs.d/plugins/git-emacs-el")
-(require 'git-emacs)
-;; Autoload (slimmer statup footprint, will activate when visiting a git
-;; file or running some top-level functions)
+(add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
 (require 'git-emacs-autoloads)
-
 
 ; action-script mode
 (add-to-list 'load-path "~/.emacs.d/plugins/flex")
@@ -83,7 +56,7 @@
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 ;; rsense
-(setq rsense-home "/home/alex/projects/ruby/rsense")
+(setq rsense-home "/home/alex/projects/env/rsense")
 (add-to-list 'load-path (concat rsense-home "/etc"))
 (require 'rsense)
 (add-hook 'ruby-mode-hook

@@ -19,3 +19,6 @@
 [submodule "plugins/jump.el"]
 	path = plugins/jump.el
 	url = git://github.com/eschulte/jump.el.git
+[submodule "plugins/git-emacs"]
+	path = plugins/git-emacs
+	url = git://github.com/tsgates/git-emacs.git
