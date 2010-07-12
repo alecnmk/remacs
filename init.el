@@ -41,6 +41,8 @@
 ; markdown mode hook
 (setq auto-mode-alist
    (cons '("\\.text" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist
+   (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 ; gist.github
 (set 'gist-view-gist 1)
@@ -54,7 +56,7 @@
 (ido-mode t)
 
 ; git-emacs
-(add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
+(add-to-list 'load-path "~/.emacs.d/plugins/git-emacs-el")
 (require 'git-emacs)
 ;; Autoload (slimmer statup footprint, will activate when visiting a git
 ;; file or running some top-level functions)
