@@ -1,6 +1,3 @@
-; emacs desktop mode
-(desktop-save-mode 1)
-
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
@@ -23,10 +20,15 @@
 
 ; gist.github
 (set 'gist-view-gist 1)
-(set 'github-user "alecnmk")
-(set 'github-token "595bec32065e5e42eeb1813e5065951f")
 (add-to-list 'load-path "~/.emacs.d/plugins/gist.el")
 (require 'gist)
+
+; mo-git-blame
+(add-to-list 'load-path "~/.emacs.d/plugins/mo-git-blame")
+(autoload 'mo-git-blame-file "mo-git-blame" nil t)
+(autoload 'mo-git-blame-current "mo-git-blame" nil t)
+(global-set-key (kbd "C-c g c") 'mo-git-blame-current)
+(global-set-key (kbd "C-c g f") 'mo-git-blame-file)
 
 ; ido
 (require 'ido)
@@ -73,12 +75,13 @@
 (require 'haml-mode)
 (require 'sass-mode)
 
-; ansi-color
-(ansi-color-for-comint-mode-on)
-
+; emacs list expectations (rspec is dependent on it)
+(add-to-list 'load-path "~/.emacs.d/plugins")
+(require 'el-expectations)
 ; mode-compile (required by rspec-mode)
 (add-to-list 'load-path "~/.emacs.d/plugins/mode-compile")
 (require 'mode-compile)
+(require 'ansi-color)
 
 ; rspec-emacs
 (add-to-list 'load-path "~/.emacs.d/plugins/rspec-mode")
@@ -132,7 +135,7 @@
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete//ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")
 (ac-config-default)
 
 (setq custom-file "~/.emacs.d/customizations.el")

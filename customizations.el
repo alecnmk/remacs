@@ -34,8 +34,12 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#151515" :foreground "#E6E1DC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 102 :width normal :foundry "unknown" :family "Inconsolata"))))
+ '(default ((t (:inherit nil :stipple nil :background "#151515" :foreground "#E6E1DC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Inconsolata"))))
  '(button ((((supports :underline t)) (:underline t))))
+ '(diff-added ((t (:inherit diff-changed))))
+ '(diff-indicator-added ((t (:inherit diff-added :foreground "green"))))
+ '(diff-indicator-removed ((t (:inherit diff-removed :foreground "red"))))
+ '(diff-removed ((t (:inherit diff-changed))))
  '(egg-header ((t (:inherit variable-pitch :weight bold :height 1.1))))
  '(egg-help-header-1 ((t (:inherit egg-text-base :weight bold :family "Inconsolata"))))
  '(egg-text-base ((((class color) (background dark)) (:inherit variable-pitch :foreground "SteelBlue" :family "Inconsolata"))))

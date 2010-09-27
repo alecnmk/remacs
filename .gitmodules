@@ -22,3 +22,6 @@
 [submodule "plugins/git-emacs"]
 	path = plugins/git-emacs
 	url = git://github.com/tsgates/git-emacs.git
+[submodule "plugins/mo-git-blame"]
+	path = plugins/mo-git-blame
+	url = git://github.com/voins/mo-git-blame.git
