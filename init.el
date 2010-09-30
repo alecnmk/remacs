@@ -38,24 +38,10 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
 (require 'git-emacs-autoloads)
 
-; action-script mode
-(add-to-list 'load-path "~/.emacs.d/plugins/flex")
-(require 'actionscript-mode)
-(add-to-list 'auto-mode-alist '("\\.as\\'" . actionscript-mode))
-
 ; yaml-mode
 (add-to-list 'load-path "~/.emacs.d/plugins/yaml-mode")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
-; vala-mode
-(add-to-list 'load-path
-	     "~/.emacs.d/plugins/vala-mode")
-(autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
-(add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
-(add-to-list 'auto-mode-alist '("\\.vapi$" . vala-mode))
-(add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
-(add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 ; haml&saas mode
 (add-to-list 'load-path "~/.emacs.d/plugins/haml-mode")
