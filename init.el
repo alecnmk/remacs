@@ -57,18 +57,6 @@
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
-;; rsense
-(setq rsense-home "/home/alex/projects/env/rsense")
-(add-to-list 'load-path (concat rsense-home "/etc"))
-(require 'rsense)
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-rsense-method)
-            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (local-set-key (kbd "C-.") 'ac-complete-rsense)))
-
 ; haml&saas mode
 (add-to-list 'load-path
 	     "~/.emacs.d/plugins/haml-mode")
