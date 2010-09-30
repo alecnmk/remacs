@@ -58,10 +58,11 @@
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 ; haml&saas mode
-(add-to-list 'load-path
-	     "~/.emacs.d/plugins/haml-mode")
+(add-to-list 'load-path "~/.emacs.d/plugins/haml-mode")
+(add-to-list 'load-path "~/.emacs.d/plugins/sass-mode")
 (require 'haml-mode)
 (require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 
 ; emacs list expectations (rspec is dependent on it)
 (add-to-list 'load-path "~/.emacs.d/plugins")
