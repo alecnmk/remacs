@@ -1,6 +1,9 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; move line/region up/down
+(load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
+
 ; swap buffers in window (by ChrisWebber)
 (setq swapping-buffer nil)
  (setq swapping-window nil)
