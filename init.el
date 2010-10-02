@@ -4,6 +4,14 @@
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
 
+; textmate.el (autobrackets behavior)
+(load-file "~/.emacs.d/plugins/textmate.el/textmate.el")
+(require 'textmate-mode)
+(defun textmate-mode-enable-hook ()
+(textmate-mode t))
+(add-hook 'ruby-mode-hook 'textmate-mode-enable-hook)
+(add-hook 'emacs-lisp-mode-hook 'textmate-mode-enable-hook)
+
 ; swap buffers in window (by ChrisWebber)
 (setq swapping-buffer nil)
  (setq swapping-window nil)
