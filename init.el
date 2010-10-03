@@ -9,6 +9,7 @@
 (require 'textmate-mode)
 (defun textmate-mode-enable-hook ()
 (textmate-mode t))
+(add-hook 'feature-mode-hook 'textmate-mode-enable-hook)
 (add-hook 'ruby-mode-hook 'textmate-mode-enable-hook)
 (add-hook 'emacs-lisp-mode-hook 'textmate-mode-enable-hook)
 
