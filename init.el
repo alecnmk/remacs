@@ -1,3 +1,9 @@
+; ELPA packagin
+(add-to-list 'load-path
+             "~/.emacs.d/plugins/package.el")
+(load "package")
+(package-initialize)
+
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
@@ -12,6 +18,7 @@
 (add-hook 'feature-mode-hook 'textmate-mode-enable-hook)
 (add-hook 'ruby-mode-hook 'textmate-mode-enable-hook)
 (add-hook 'emacs-lisp-mode-hook 'textmate-mode-enable-hook)
+(add-hook 'clojure-mode-hook 'textmate-mode-enable-hook)
 
 ; swap buffers in window (by ChrisWebber)
 (setq swapping-buffer nil)
