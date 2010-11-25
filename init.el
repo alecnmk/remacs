@@ -1,3 +1,5 @@
+(desktop-save-mode 1)
+
 ; ELPA packagin
 (add-to-list 'load-path
              "~/.emacs.d/plugins/package.el")
@@ -9,6 +11,11 @@
 
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
+
+; nxhtml mode
+(add-to-list 'load-path
+             "~/.emacs.d/plugins/nxhtml")
+(load "autostart.el")
 
 ; textmate.el (autobrackets behavior)
 (load-file "~/.emacs.d/plugins/textmate.el/textmate.el")
