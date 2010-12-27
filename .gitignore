@@ -6,5 +6,4 @@ ac-comphist.dat
 session.*
 tramp
 abbrev_defs
-plugins/nxhtml/**
-elpa/archives/elpa/archive-contents
+plugins/nxhtml
