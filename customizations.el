@@ -22,7 +22,6 @@
  '(js2-bounce-indent-p nil)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
  '(mumamo-indent-widen-per-major (quote ((nxhtml-mode ((html-mumamo-mode nxhtml-mumamo-mode))) (html-mode ((html-mumamo-mode nxhtml-mumamo-mode))))))
- '(org-agenda-files (quote ("~/projects/ruby/proxet/shareandtell/thesharenetwork/project.org")))
  '(rails-ws:default-server-type "webrick")
  '(safe-local-variable-values (quote ((require-final-newline))))
  '(scroll-bar-mode nil)
