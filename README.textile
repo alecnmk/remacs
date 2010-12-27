@@ -1,6 +1,6 @@
 # How to install/configure #
 
-First of all you'll need last emacs. In case you're on Ubuntu, you're able to get it from [https://launchpad.net/~ubuntu-elisp/+archive/ppa](https://launchpad.net/~ubuntu-elisp/+archive/ppa). (Remove any Emacses you have installed before installing .deb 'emacs23')
+First of all you'll need last emacs. In case you're on Ubuntu, you're able to get it from https://launchpad.net/~ubuntu-elisp/+archive/ppa. (Remove any Emacses you have installed before installing .deb 'emacs23')
 
 Make sure you've installed .deb packages:
 1. emacs-goodies-el
@@ -12,7 +12,7 @@ Then:
 1. Clone the repo to the '~/.emacs.d'
 2. `cd ~/.emacs.d`
 3. `git submodule update`
-4. install nxhtml mode like described here: [http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html](http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html) to ~/.emacs.d/plugins/nxhtml
+4. install nxhtml mode like described here: http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html to ~/.emacs.d/plugins/nxhtml
 4. run emacs
 5. enjoy or contact me if anything wrong
 
