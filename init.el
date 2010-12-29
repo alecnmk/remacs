@@ -95,12 +95,8 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
-; haml&saas mode
-(add-to-list 'load-path "~/.emacs.d/plugins/haml-mode")
-(add-to-list 'load-path "~/.emacs.d/plugins/sass-mode")
-(require 'haml-mode)
-(require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
 ; emacs list expectations (rspec is dependent on it)
 (add-to-list 'load-path "~/.emacs.d/plugins")

@@ -25,12 +25,6 @@
 [submodule "plugins/mo-git-blame"]
 	path = plugins/mo-git-blame
 	url = git://github.com/voins/mo-git-blame.git
-[submodule "plugins/haml-mode"]
-	path = plugins/haml-mode
-	url = git://github.com/nex3/haml-mode.git
-[submodule "plugins/sass-mode"]
-	path = plugins/sass-mode
-	url = git://github.com/nex3/sass-mode.git
 [submodule "plugins/package.el"]
 	path = plugins/package.el
 	url = git://github.com/technomancy/package.el.git
