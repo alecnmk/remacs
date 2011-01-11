@@ -11,7 +11,7 @@ Make sure you've installed .deb packages:
 Then:
 1. Clone the repo to the '~/.emacs.d'
 2. `cd ~/.emacs.d`
-3. `git submodule update`
+3. `git submodule update --init`
 4. install nxhtml mode like described here: http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html to ~/.emacs.d/plugins/nxhtml
 4. run emacs
 5. enjoy or contact me if anything wrong

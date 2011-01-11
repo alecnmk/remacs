@@ -12,10 +12,14 @@
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
 
+; haml & sass
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.html.haml$" . haml-mode))
+
 ; nxhtml mode
 (add-to-list 'load-path
              "~/.emacs.d/plugins/nxhtml")
-(load "autostart.el")
+; (load "autostart.el")
 
 ; textmate.el (autobrackets behavior)
 (load-file "~/.emacs.d/plugins/textmate.el/textmate.el")
@@ -94,9 +98,6 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/yaml-mode")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
-(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
 ; emacs list expectations (rspec is dependent on it)
 (add-to-list 'load-path "~/.emacs.d/plugins")
