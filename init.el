@@ -9,6 +9,11 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; coffeescript mode
+(add-to-list 'load-path "~/.emacs.d/plugins/coffee-mode")
+(require 'coffee-mode)
+; /coffeescript mode
+
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
 

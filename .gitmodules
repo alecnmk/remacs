@@ -28,3 +28,6 @@
 [submodule "plugins/package.el"]
 	path = plugins/package.el
 	url = git://github.com/technomancy/package.el.git
+[submodule "plugins/coffee-mode"]
+	path = plugins/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
