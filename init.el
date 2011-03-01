@@ -9,6 +9,11 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; actionscript mode
+(add-to-list 'load-path "~/.emacs.d/plugins/actionscript")
+(require 'actionscript-mode)
+(add-to-list 'auto-mode-alist '("\\.as$" . actionscript-mode))
+
 ; coffeescript mode
 (add-to-list 'load-path "~/.emacs.d/plugins/coffee-mode")
 (require 'coffee-mode)
