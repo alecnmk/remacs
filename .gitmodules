@@ -31,3 +31,6 @@
 [submodule "plugins/coffee-mode"]
 	path = plugins/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
+[submodule "themes/twilight"]
+	path = themes/twilight
+	url = git://github.com/crafterm/twilight-emacs.git

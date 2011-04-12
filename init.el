@@ -1,4 +1,4 @@
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 ; ELPA packagin
 (add-to-list 'load-path
@@ -13,6 +13,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/actionscript")
 (require 'actionscript-mode)
 (add-to-list 'auto-mode-alist '("\\.as$" . actionscript-mode))
+(add-to-list 'auto-mode-alist '("\\.mxml$" . xml-mode))
 
 ; coffeescript mode
 (add-to-list 'load-path "~/.emacs.d/plugins/coffee-mode")
@@ -124,7 +125,8 @@
 ; applying color heme
 (require 'color-theme)
 (load-file "~/.emacs.d/themes/color-theme-railscasts.el")
-(color-theme-railscasts)
+(load-file "~/.emacs.d/themes/twilight/color-theme-twilight.el")
+(color-theme-twilight)
 
 ; disabling tool bar
 (tool-bar-mode)
