@@ -51,6 +51,7 @@
  '(diff-indicator-removed ((t (:inherit diff-removed :foreground "red"))))
  '(diff-removed ((t (:inherit diff-changed))))
  '(egg-header ((t (:inherit variable-pitch :weight bold :height 1.1))))
+ '(font-lock-warning-face ((t (:foreground "red"))))
  '(fringe ((t nil)))
  '(header-line ((default (:inherit mode-line)) (((class color grayscale) (background dark)) (:background "grey20" :foreground "grey90" :box nil))))
  '(mode-line ((t (:background "gray30" :foreground "white" :box nil))))
