@@ -139,7 +139,6 @@
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 ;; Rinari
-(add-to-list 'load-path "~/.emacs.d/plugins/jump.el")
 (add-to-list 'load-path "~/.emacs.d/plugins/rinari")
 (require 'rinari)
 
