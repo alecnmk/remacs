@@ -34,3 +34,9 @@
 [submodule "themes/twilight"]
 	path = themes/twilight
 	url = git://github.com/crafterm/twilight-emacs.git
+[submodule "plugins/deft"]
+	path = plugins/deft
+	url = git://github.com/emacsmirror/deft.git
+[submodule "plugins/nxhtml"]
+	path = plugins/nxhtml
+	url = git://github.com/emacsmirror/nxhtml.git

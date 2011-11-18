@@ -9,6 +9,16 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; deft mode
+(add-to-list 'load-path "~/.emacs.d/plugins/deft")
+
+(when (require 'deft nil 'noerror)
+   (setq
+      deft-extension "org"
+      deft-directory "~/.deft/"
+      deft-text-mode 'org-mode)
+   (global-set-key (kbd "<f9>") 'deft))
+
 ; actionscript mode
 (add-to-list 'load-path "~/.emacs.d/plugins/actionscript")
 (require 'actionscript-mode)
@@ -25,7 +35,7 @@
 
 ; haml & sass
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
-(add-to-list 'auto-mode-alist '("\\.html.haml$" . haml-mode))
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
 ; nxhtml mode
 (add-to-list 'load-path
