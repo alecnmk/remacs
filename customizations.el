@@ -24,6 +24,11 @@
  '(js2-bounce-indent-p nil)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
  '(mumamo-indent-widen-per-major (quote ((nxhtml-mode ((html-mumamo-mode nxhtml-mumamo-mode))) (html-mode ((html-mumamo-mode nxhtml-mumamo-mode))))))
+ '(ns-alternate-modifier (quote meta))
+ '(ns-antialias-text t)
+ '(ns-command-modifier (quote control))
+ '(ns-control-modifier nil)
+ '(ns-right-alternate-modifier (quote meta))
  '(nxhtml-default-encoding (quote utf-8))
  '(rails-ws:default-server-type "webrick")
  '(safe-local-variable-values (quote ((require-final-newline))))
@@ -40,12 +45,14 @@
  '(tabbar-scroll-left-button (quote (("<") "=")))
  '(tabbar-scroll-right-button (quote ((">") "=")))
  '(tabbar-separator (quote ("|")))
- '(tabbar-use-images nil))
+ '(tabbar-use-images nil)
+ '(yas/trigger-key "<M-tab>"))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#141414" :foreground "#F8F8F8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "apple" :family "Monaco"))))
  '(button ((((supports :underline t)) (:underline t))))
  '(diff-added ((t (:inherit diff-changed))))
  '(diff-indicator-added ((t (:inherit diff-added :foreground "green"))))
@@ -64,6 +71,7 @@
  '(mumamo-background-chunk-submode2 ((t nil)))
  '(mumamo-background-chunk-submode3 ((t nil)))
  '(mumamo-background-chunk-submode4 ((t nil)))
+ '(ns-working-text-face ((t (:underline t))))
  '(scroll-bar ((t nil)))
  '(tabbar-button ((t (:background "black" :foreground "lightgreen"))))
  '(tabbar-button-face ((t (:inherit tabbar-default-face :foreground "green"))))

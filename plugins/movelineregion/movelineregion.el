@@ -28,5 +28,5 @@
   arg lines up."
    (interactive "*p")
    (move-text-internal (- arg)))
-(global-set-key [(M super up)] 'move-text-up)
-(global-set-key [(M super down)] 'move-text-down)
+(global-set-key [(M C up)] 'move-text-up)
+(global-set-key [(M C down)] 'move-text-down)

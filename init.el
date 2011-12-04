@@ -1,5 +1,20 @@
 ;(desktop-save-mode 1)
 
+(ns-toggle-toolbar)
+
+(add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+
+; indent-region key rebind
+(global-set-key (kbd "C-M-/") 'indent-region)
+
+; fullscreen toggle
+(global-set-key (kbd "C-`") 'ns-toggle-fullscreen)
+
+; delete key fix
+(global-set-key [kp-delete] 'delete-char) ; in Carbon
+
 ; ELPA packagin
 (add-to-list 'load-path
              "~/.emacs.d/plugins/package.el")
@@ -8,6 +23,13 @@
 
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
+
+; tabbar mode
+(add-to-list 'load-path "~/.emacs.d/plugins/tabbar")
+(require 'tabbar)
+
+; jump-mode
+(add-to-list 'load-path "~/.emacs.d/plugins/jump")
 
 ; deft mode
 (add-to-list 'load-path "~/.emacs.d/plugins/deft")
@@ -133,6 +155,7 @@
 (require 'rspec-mode)
 
 ; applying color heme
+(add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0")
 (require 'color-theme)
 (load-file "~/.emacs.d/themes/color-theme-railscasts.el")
 (load-file "~/.emacs.d/themes/twilight/color-theme-twilight.el")

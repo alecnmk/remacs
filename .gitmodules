@@ -46,3 +46,13 @@
 [submodule "plugins/tabbar"]
 	path = plugins/tabbar
 	url = git://github.com/dholm/tabbar.git
+[submodule "plugins/jump"]
+	path = plugins/jump
+	url = git://github.com/eschulte/jump.el.git
+[submodule "plugins/tabbar"]
+	path = plugins/tabbar
+	url = git://github.com/dholm/tabbar.git
+[submodule "plugins/maxframe"]
+	path = plugins/maxframe
+	url = git://github.com/rmm5t/maxframe.el.git
+
