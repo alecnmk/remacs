@@ -10,7 +10,7 @@
 (global-set-key (kbd "C-M-/") 'indent-region)
 
 ; fullscreen toggle
-(global-set-key (kbd "C-`") 'ns-toggle-fullscreen)
+(global-set-key (kbd "C-M-`") 'ns-toggle-fullscreen)
 
 ; delete key fix
 (global-set-key [kp-delete] 'delete-char) ; in Carbon
@@ -54,6 +54,9 @@
 
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
+
+; rabl
+(add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))
 
 ; haml & sass
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
