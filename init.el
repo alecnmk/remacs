@@ -2,15 +2,12 @@
 
 (ns-toggle-toolbar)
 
-(add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
-(require 'maxframe)
-(add-hook 'window-setup-hook 'maximize-frame t)
+;; (add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
+;; (require 'maxframe)
+;; (add-hook 'window-setup-hook 'maximize-frame t)
 
 ; indent-region key rebind
 (global-set-key (kbd "C-M-/") 'indent-region)
-
-; fullscreen toggle
-(global-set-key (kbd "C-M-`") 'ns-toggle-fullscreen)
 
 ; delete key fix
 (global-set-key [kp-delete] 'delete-char) ; in Carbon
@@ -23,6 +20,10 @@
 
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
+
+; slim-mode
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-slim")
+(require 'slim-mode)
 
 ; tabbar mode
 (add-to-list 'load-path "~/.emacs.d/plugins/tabbar")
@@ -115,6 +116,9 @@
 (yas/load-directory yas/root-directory)
 
 ; markdown mode hook
+(add-to-list 'load-path "~/.emacs.d/plugins/markdown-mode")
+(autoload 'markdown-mode "markdown-mode.el"
+   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
    (cons '("\\.text" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist
@@ -211,3 +215,7 @@
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
+
+; fullscreen toggle
+(global-set-key (kbd "C-M-`") 'ns-toggle-fullscreen)
+(add-hook 'after-init-hook (lambda () (ns-toggle-fullscreen) (redisplay) ) )

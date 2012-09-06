@@ -50,3 +50,9 @@
 [submodule "plugins/maxframe"]
 	path = plugins/maxframe
 	url = git://github.com/rmm5t/maxframe.el.git
+[submodule "plugins/markdown-mode"]
+	path = plugins/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule "plugins/emacs-slim"]
+	path = plugins/emacs-slim
+	url = git://github.com/minad/emacs-slim.git
