@@ -124,11 +124,6 @@
 (setq auto-mode-alist
    (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
-; gist.github
-(set 'gist-view-gist 1)
-(add-to-list 'load-path "~/.emacs.d/plugins/gist.el")
-(require 'gist)
-
 ; mo-git-blame
 (add-to-list 'load-path "~/.emacs.d/plugins/mo-git-blame")
 (autoload 'mo-git-blame-file "mo-git-blame" nil t)
