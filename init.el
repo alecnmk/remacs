@@ -2,6 +2,8 @@
 
 (ns-toggle-toolbar)
 
+(setq create-lockfiles nil)
+
 ;; (add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
 ;; (require 'maxframe)
 ;; (add-hook 'window-setup-hook 'maximize-frame t)
@@ -213,4 +215,3 @@
 
 ; fullscreen toggle
 (global-set-key (kbd "C-M-`") 'ns-toggle-fullscreen)
-(add-hook 'after-init-hook (lambda () (ns-toggle-fullscreen) (redisplay) ) )
