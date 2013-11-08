@@ -1,0 +1,1 @@
+("~/projects/apptopia/boglach/" "~/.emacs.d/" "~/projects/apptopia/apptopia/")

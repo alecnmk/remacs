@@ -1,18 +1,7 @@
-;(desktop-save-mode 1)
-
-(ns-toggle-toolbar)
-
-(setq create-lockfiles nil)
-
-;; (add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
-;; (require 'maxframe)
-;; (add-hook 'window-setup-hook 'maximize-frame t)
-
-; indent-region key rebind
-(global-set-key (kbd "C-M-/") 'indent-region)
-
-; delete key fix
-(global-set-key [kp-delete] 'delete-char) ; in Carbon
+; MELPA packaging
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ; ELPA packagin
 (add-to-list 'load-path
@@ -20,8 +9,33 @@
 (load "package")
 (package-initialize)
 
+; (desktop-save-mode 1)
+
+; (ns-toggle-toolbar)
+
+(setq create-lockfiles nil)
+
+(add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+
+; indent-region key rebind
+(global-set-key (kbd "C-M-/") 'indent-region)
+
+; delete key fix
+(global-set-key [kp-delete] 'delete-char) ; in Carbon
+
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
+
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+; tune GC
+(setq gc-cons-threshold 20000000)
 
 ; slim-mode
 (add-to-list 'load-path "~/.emacs.d/plugins/emacs-slim")
@@ -104,7 +118,7 @@
        (setq swapping-buffer (current-buffer))
        (setq swapping-window (selected-window))
        (message "Buffer and window marked for swapping."))))
- (global-set-key (kbd "C-c p") 'swap-buffers-in-windows)
+ (global-set-key (kbd "C-c s") 'swap-buffers-in-windows)
 
 ; deleting trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -163,7 +177,7 @@
 (require 'color-theme)
 (load-file "~/.emacs.d/themes/color-theme-railscasts.el")
 (load-file "~/.emacs.d/themes/twilight/color-theme-twilight.el")
-(color-theme-twilight)
+(color-theme-solarized-dark)
 
 ; disabling tool bar
 (tool-bar-mode)
