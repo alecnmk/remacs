@@ -1,12 +1,10 @@
 ; MELPA packaging
 (require 'package)
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+ '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-; ELPA packagin
-(add-to-list 'load-path
-             "~/.emacs.d/plugins/package.el")
-(load "package")
+; ELPA packaging
+; (load "package")
 (package-initialize)
 
 ; (desktop-save-mode 1)
@@ -28,6 +26,10 @@
 ; disabling menu-bar-mode
 (menu-bar-mode -1)
 
+; ido
+(require 'ido)
+(ido-mode t)
+
 (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
@@ -37,42 +39,11 @@
 ; tune GC
 (setq gc-cons-threshold 20000000)
 
-; slim-mode
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-slim")
-(require 'slim-mode)
-
-; tabbar mode
-(add-to-list 'load-path "~/.emacs.d/plugins/tabbar")
-(require 'tabbar)
-
-; jump-mode
-(add-to-list 'load-path "~/.emacs.d/plugins/jump")
-
-; deft mode
-(add-to-list 'load-path "~/.emacs.d/plugins/deft")
-
-(when (require 'deft nil 'noerror)
-   (setq
-      deft-extension "org"
-      deft-directory "~/.deft/"
-      deft-text-mode 'org-mode)
-   (global-set-key (kbd "<f9>") 'deft))
-
-; actionscript mode
-(add-to-list 'load-path "~/.emacs.d/plugins/actionscript")
-(require 'actionscript-mode)
-(add-to-list 'auto-mode-alist '("\\.as$" . actionscript-mode))
-(add-to-list 'auto-mode-alist '("\\.mxml$" . xml-mode))
-
-; coffeescript mode
-(add-to-list 'load-path "~/.emacs.d/plugins/coffee-mode")
-(require 'coffee-mode)
-; /coffeescript mode
-
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
 
 ; rabl
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))
 
 ; haml & sass
@@ -123,54 +94,19 @@
 ; deleting trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-; adding yasnippet
-(add-to-list 'load-path
-             "~/.emacs.d/plugins/yasnippet-0.6.1c")
-(require 'yasnippet)
-(setq yas/root-directory "~/.emacs.d/snippets")
-(yas/initialize)
-(yas/load-directory yas/root-directory)
-
-; markdown mode hook
-(add-to-list 'load-path "~/.emacs.d/plugins/markdown-mode")
-(autoload 'markdown-mode "markdown-mode.el"
-   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
    (cons '("\\.text" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist
    (cons '("\\.md" . markdown-mode) auto-mode-alist))
-
-; mo-git-blame
-(add-to-list 'load-path "~/.emacs.d/plugins/mo-git-blame")
-(autoload 'mo-git-blame-file "mo-git-blame" nil t)
-(autoload 'mo-git-blame-current "mo-git-blame" nil t)
-(global-set-key (kbd "C-c g c") 'mo-git-blame-current)
-(global-set-key (kbd "C-c g f") 'mo-git-blame-file)
-
-; ido
-(require 'ido)
-(ido-mode t)
 
 ; git-emacs
 (add-to-list 'load-path "~/.emacs.d/plugins/git-emacs")
 (require 'git-emacs-autoloads)
 
 ; yaml-mode
-(add-to-list 'load-path "~/.emacs.d/plugins/yaml-mode")
-(require 'yaml-mode)
+;; (add-to-list 'load-path "~/.emacs.d/plugins/yaml-mode")
+;; (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
-; emacs list expectations (rspec is dependent on it)
-(add-to-list 'load-path "~/.emacs.d/plugins")
-(require 'el-expectations)
-; mode-compile (required by rspec-mode)
-(add-to-list 'load-path "~/.emacs.d/plugins/mode-compile")
-(require 'mode-compile)
-(require 'ansi-color)
-
-; rspec-emacs
-(add-to-list 'load-path "~/.emacs.d/plugins/rspec-mode")
-(require 'rspec-mode)
 
 ; applying color heme
 (add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0")
@@ -188,10 +124,6 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/cucumber.el")
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-
-;; Rinari
-(add-to-list 'load-path "~/.emacs.d/plugins/rinari")
-(require 'rinari)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
