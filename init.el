@@ -11,6 +11,9 @@
 
 ; (ns-toggle-toolbar)
 
+; setting up projectile
+(projectile-global-mode)
+
 (setq create-lockfiles nil)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/maxframe")
@@ -38,6 +41,12 @@
 (setq ido-use-faces nil)
 ; tune GC
 (setq gc-cons-threshold 20000000)
+
+(require 'rinari)
+
+; turning on rspec snippets
+(eval-after-load 'rspec-mode
+  '(rspec-install-snippets))
 
 ; move line/region up/down
 (load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
@@ -160,4 +169,4 @@
 (load custom-file)
 
 ; fullscreen toggle
-(global-set-key (kbd "C-M-`") 'ns-toggle-fullscreen)
+(global-set-key (kbd "C-M-`") 'toggle-frame-fullscreen)

@@ -24,7 +24,7 @@
  '(js-js-switch-tabs nil)
  '(js2-auto-indent-p t)
  '(js2-bounce-indent-p nil)
- '(mf-display-padding-height 48)
+ '(mf-display-padding-height 60)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
  '(mumamo-indent-widen-per-major (quote ((nxhtml-mode ((html-mumamo-mode nxhtml-mumamo-mode))) (html-mode ((html-mumamo-mode nxhtml-mumamo-mode))))))
  '(ns-alternate-modifier (quote meta))
@@ -53,8 +53,8 @@
  '(tabbar-separator (quote ("|")))
  '(tabbar-use-images nil)
  '(tool-bar-mode nil)
- '(yas/global-mode t nil (yasnippet))
- '(yas/root-directory "~/.emacs.d/snippets" nil (yasnippet))
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-snippet-dirs "~/.emacs.d/snippets" nil (yasnippet))
  '(yas/trigger-key "<M-tab>"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
