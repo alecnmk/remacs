@@ -1,4 +1,0 @@
-#name : redirect_to :action => " ... ", :id =>  ... 
-#group : rails
-# --
-redirect_to :action => "${show}", :id => ${@item}

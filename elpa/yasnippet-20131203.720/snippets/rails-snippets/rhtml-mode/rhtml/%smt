@@ -1,3 +1,0 @@
-#name : <%= submit_tag '${title}' %>
-# --
-<%= submit_tag '${title}' %>

@@ -1,4 +1,0 @@
-#name : render_component :action => " ... "
-#group : rails
-# --
-render_component :action => "${index}"

@@ -1,4 +1,0 @@
-#name : render :nothing =>  ... , :status =>  ... 
-#group : rails
-# --
-render :nothing => ${true}, :status => ${401}

@@ -1,4 +1,0 @@
-#name : render :partial => " ... ", :locals => { : ...  => " ... "}
-#group : rails
-# --
-render :partial => "${item}", :locals => { :${name} => "${value}"}

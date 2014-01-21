@@ -1,3 +1,0 @@
-#name : <%= f.label :property %>
-# --
-<%= ${f}.label :${property} %>

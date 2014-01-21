@@ -1,5 +1,0 @@
-#name : <% form_for @object do |f| %> ... <% end  %>
-# --
-<% form_for @${object} do |f| %>
-$0
-<% end %>

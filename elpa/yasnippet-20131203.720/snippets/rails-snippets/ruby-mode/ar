@@ -1,4 +1,0 @@
-#name : assert_raises  ...  { $. }
-#group : rails
-# --
-assert_raises ${Exception} { $. }

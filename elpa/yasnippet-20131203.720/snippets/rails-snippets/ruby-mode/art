@@ -1,4 +1,0 @@
-#name : assert_redirected_to :controller => " ... "
-#group : rails
-# --
-assert_redirected_to :controller => "${controller}"

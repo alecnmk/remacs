@@ -1,4 +1,0 @@
-#name : render_component :controller => " ... "
-#group : rails
-# --
-render_component :controller => "${items}"

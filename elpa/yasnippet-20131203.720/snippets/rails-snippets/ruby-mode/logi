@@ -1,4 +1,0 @@
-#name : logger.info " ... "
-#group : rails
-# --
-logger.info "${Text here...}"

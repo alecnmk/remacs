@@ -54,7 +54,7 @@
  '(tabbar-use-images nil)
  '(tool-bar-mode nil)
  '(yas-global-mode t nil (yasnippet))
- '(yas-snippet-dirs "~/.emacs.d/snippets" nil (yasnippet))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet))
  '(yas/trigger-key "<M-tab>"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -1,3 +1,0 @@
-#name : <%= f.submit '${title}' %>
-# --
-<%= ${f}.submit '${title}' %>
