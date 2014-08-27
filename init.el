@@ -3,6 +3,8 @@
 (add-to-list 'package-archives
  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+(setq ns-use-native-fullscreen nil)
+
 ; ELPA packaging
 ; (load "package")
 (package-initialize)
@@ -10,6 +12,21 @@
 ; (desktop-save-mode 1)
 
 ; (ns-toggle-toolbar)
+
+; mouse
+(require 'mouse)
+(xterm-mouse-mode t)
+(defun track-mouse (e))
+(setq mouse-sel-mode t)
+
+(require 'move-text)
+(move-text-default-bindings)
+(global-set-key (kbd "ESC <up>") 'move-text-up)
+(global-set-key (kbd "ESC <down>") 'move-text-down)
+
+; setting-up R
+(add-to-list 'load-path "~/.emacs.d/plugins/ess/lisp")
+(load "ess-site")
 
 ; setting up projectile
 (projectile-global-mode)
@@ -47,9 +64,6 @@
 ; turning on rspec snippets
 (eval-after-load 'rspec-mode
   '(rspec-install-snippets))
-
-; move line/region up/down
-(load-file "~/.emacs.d/plugins/movelineregion/movelineregion.el")
 
 ; rabl
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
@@ -160,10 +174,10 @@
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
 ;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")
-(ac-config-default)
+;; (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/")
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")
+;; (ac-config-default)
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)

@@ -5,6 +5,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-delay 0.3)
  '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode clojure-mode java-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode haml-mode sass-mode)))
  '(ac-quick-help-delay 1.0)
  '(coffee-js-mode (quote javascript-mode))
@@ -36,7 +37,6 @@
  '(rails-ws:default-server-type "webrick")
  '(safe-local-variable-values (quote ((encoding . utf-8) (require-final-newline))))
  '(scroll-bar-mode nil)
- '(sieve-manage-default-user "alex@alecnmk.com")
  '(small-temporary-file-directory nil)
  '(stack-trace-on-error nil)
  '(standard-indent 2)

@@ -56,3 +56,6 @@
 [submodule "plugins/emacs-slim"]
 	path = plugins/emacs-slim
 	url = git://github.com/minad/emacs-slim.git
+[submodule "plugins/ess"]
+	path = plugins/ess
+	url = https://github.com/emacs-ess/ESS.git
